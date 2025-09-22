@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galaxipedia — Ensiklopedia Samsung Galaxy</title>
+  <meta name="description" content="Galaxipedia: ensiklopedia lengkap tentang lini Samsung Galaxy — spesifikasi, sejarah, perbandingan, dan ulasan.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <h1>Galaxipedia</h1>
+    <p>Ensiklopedia khusus Samsung Galaxy</p>
+    <nav aria-label="Utama">
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#devices">Perangkat</a></li>
+        <li><a href="#compare">Perbandingan</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Hero / Landing section -->
+    <section id="home" aria-labelledby="hero-title">
+      <h2 id="hero-title">Semua yang Perlu Anda Ketahui tentang Samsung Galaxy</h2>
+      <p>Spesifikasi, riwayat rilis, perbandingan model, dan panduan singkat — dikurasi untuk penggemar Galaxy.</p>
+
+      <form action="/search" method="get" role="search">
+        <label for="q">Cari model atau topik:</label><br>
+        <input type="search" id="q" name="q" placeholder="Mis. Galaxy S24">
+        <button type="submit" class="btn btn-primary">Cari</button>
+      </form>
+    </section>
+
+    <!-- Devices Section (Flexbox Layout) -->
+    <section id="devices" aria-labelledby="devices-title">
+      <h3 id="devices-title">Kategori Perangkat</h3>
+      <div class="devices-container">
+        <!-- Daftar kategori -->
+        <div class="devices-list">
+          <article class="card">
+            <h4>Seri S</h4>
+            <p>Flagship mainstream untuk performa dan kamera.</p>
+          </article>
+          <article class="card">
+            <h4>Seri Note / Ultra</h4>
+            <p>Seri produktivitas dengan fitur layar besar dan S Pen (varian).</p>
+          </article>
+          <article class="card">
+            <h4>Seri A</h4>
+            <p>Perangkat kelas menengah dengan rasio harga/fitur menarik.</p>
+          </article>
+        </div>
+
+        <!-- Box Kosong -->
+        <div class="devices-box">
+          <p>(belum ada)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison / highlights -->
+    <section id="compare" aria-labelledby="compare-title">
+      <h3 id="compare-title">Perbandingan singkat</h3>
+      <p>Gunakan halaman perbandingan untuk menilai spesifikasi inti seperti CPU, RAM, kamera, dan baterai antar-model.</p>
+      <ul>
+        <li>Perbandingan 1: Galaxy S vs Galaxy S Ultra</li>
+        <li>Perbandingan 2: Seri A terbaik tahun ini</li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h3 id="about-title">Tentang Galaxipedia</h3>
+      <p>Galaxipedia dibuat sebagai referensi independen yang mengumpulkan informasi teknis dan sejarah rilis seri Samsung Galaxy. Konten dikurasi dan dirangkum dari sumber resmi dan komunitas.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h3 id="contact-title">Kontak</h3>
+      <p>Untuk kontribusi data, koreksi, atau pertanyaan: <a href="mailto:example@email.com">Hubungi kami</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year">2025</span> Galaxipedia</p>
+    <p>Referensi desain dan sumber yang direkomendasikan:</p>
+    <ul>
+      <li><a href="https://developer.samsung.com/" target="_blank" rel="noopener">Samsung Developers</a></li>
+      <li><a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Official</a></li>
+      <li><a href="https://www.gsmarena.com/" target="_blank" rel="noopener">GSMArena</a></li>
+    </ul>
+    <p>Halaman ini dibuat dengan HTML5 + CSS3, Flexbox & Grid — tanpa framework sesuai ketentuan tugas.</p>
+  </footer>
+</body>
+</html>
