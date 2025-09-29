@@ -10,15 +10,27 @@
 <body>
   <!-- Header / Navigation -->
   <header>
-    <h1>Galaxipedia</h1>
-    <p>Ensiklopedia khusus Samsung Galaxy</p>
+    <div class="header-top">
+      <div class="header-left">
+        <h1>Galaxipedia</h1>
+        <p>Ensiklopedia khusus Samsung Galaxy</p>
+      </div>
+      <div class="header-right">
+        <a href="#" class="rss-icon" title="RSS Feed">📡</a>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+      </div>
+    </div>
+
     <nav aria-label="Utama">
       <ul>
-        <li><a href="#home">Beranda</a></li>
-        <li><a href="#devices">Perangkat</a></li>
-        <li><a href="#compare">Perbandingan</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#devices">NEWS</a></li>
+        <li><a href="#compare">REVIEWS</a></li>
+        <li><a href="#about">VIDEOS</a></li>
+        <li><a href="#contact">PHONE FINDER</a></li>
+        <li><a href="#contact">DEALS</a></li>
+        <li><a href="#contact">COVERAGE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
   </header>
@@ -79,12 +91,6 @@
       <h3 id="about-title">Tentang Galaxipedia</h3>
       <p>Galaxipedia dibuat sebagai referensi independen yang mengumpulkan informasi teknis dan sejarah rilis seri Samsung Galaxy. Konten dikurasi dan dirangkum dari sumber resmi dan komunitas.</p>
     </section>
-
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h3 id="contact-title">Kontak</h3>
-      <p>Untuk kontribusi data, koreksi, atau pertanyaan: <a href="mailto:example@email.com">Hubungi kami</a></p>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -96,7 +102,34 @@
       <li><a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Official</a></li>
       <li><a href="https://www.gsmarena.com/" target="_blank" rel="noopener">GSMArena</a></li>
     </ul>
-    <p>Halaman ini dibuat dengan HTML5 + CSS3, Flexbox & Grid — tanpa framework sesuai ketentuan tugas.</p>
+    <p>gak tau.</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Cek dark mode sebelumnya
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+      toggleButton.textContent = '☀️ Light Mode';
+    }
+
+    // Toggle Dark Mode
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        toggleButton.textContent = '☀️ Light Mode';
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+        toggleButton.textContent = '🌙 Dark Mode';
+      }
+    });
+
+    // Auto tahun footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
